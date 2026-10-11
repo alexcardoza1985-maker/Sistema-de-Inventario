@@ -1,4 +1,5 @@
-
+import java.io.PrintStream;
+import java.nio.charset.StandardCharsets;
 import src.persistencia.InventarioArchivo;
 import src.servicio.InventarioService;
 import src.vista.Menu;
@@ -7,7 +8,13 @@ import src.vista.Menu;
 public class SistemaInventario {
 
     public static void main(String[] args) {
-       // Ruta del archivo de persistencia
+       // 1. Línea de código para configurar la consola en UTF-8
+        System.setOut(new PrintStream(System.out, true, StandardCharsets.UTF_8));
+
+        // 2. A partir de aquí va el resto de tu código original...
+        System.out.println("¡Bienvenido al sistema! Registrando productos con éxito...");
+        
+        // Ruta del archivo de persistencia
         String rutaArchivo = "datos/inventario.txt";
 
         // Inyección de dependencias (manual)
